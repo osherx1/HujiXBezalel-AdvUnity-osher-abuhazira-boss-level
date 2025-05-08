@@ -1,0 +1,942 @@
+fileFormatVersion: 2
+guid: 64f457887d139b34ea46fac0fd1d2945
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8569451046222253059
+    second: main_leftside_lift_down-Sheet_0
+  - first:
+      213: 805521658698864912
+    second: main_leftside_lift_down-Sheet_1
+  - first:
+      213: 8267228144390952358
+    second: main_leftside_lift_down-Sheet_2
+  - first:
+      213: -6422281580281755115
+    second: main_leftside_lift_down-Sheet_3
+  - first:
+      213: 1056875896980135462
+    second: main_leftside_lift_down-Sheet_4
+  - first:
+      213: 5396900624768343500
+    second: main_leftside_lift_down-Sheet_5
+  - first:
+      213: 3365067118313345864
+    second: main_leftside_lift_down-Sheet_6
+  - first:
+      213: -7100761875513405675
+    second: main_leftside_lift_down-Sheet_7
+  - first:
+      213: 2263720446625893220
+    second: main_leftside_lift_down-Sheet_8
+  - first:
+      213: -119846732632183226
+    second: main_leftside_lift_down-Sheet_9
+  - first:
+      213: 6455165716729117471
+    second: main_leftside_lift_down-Sheet_10
+  - first:
+      213: 4366234262131802638
+    second: main_leftside_lift_down-Sheet_11
+  - first:
+      213: -126938730980860634
+    second: main_leftside_lift_down-Sheet_12
+  - first:
+      213: 6937751327914028065
+    second: main_leftside_lift_down-Sheet_13
+  - first:
+      213: 8434235145143732156
+    second: main_leftside_lift_down-Sheet_14
+  - first:
+      213: -5200205754484661974
+    second: main_leftside_lift_down-Sheet_15
+  - first:
+      213: -5401158154705706859
+    second: main_leftside_lift_down-Sheet_16
+  - first:
+      213: 198341038071076818
+    second: main_leftside_lift_down-Sheet_17
+  - first:
+      213: 3312467672659398337
+    second: main_leftside_lift_down-Sheet_18
+  - first:
+      213: -3628272491693403870
+    second: main_leftside_lift_down-Sheet_19
+  - first:
+      213: -8376700463460997694
+    second: main_leftside_lift_down-Sheet_20
+  - first:
+      213: 7423081036629010538
+    second: main_leftside_lift_down-Sheet_21
+  - first:
+      213: 9212872074945712042
+    second: main_leftside_lift_down-Sheet_22
+  - first:
+      213: -6984350541454820814
+    second: main_leftside_lift_down-Sheet_23
+  - first:
+      213: -6485821854828611354
+    second: main_leftside_lift_down-Sheet_24
+  - first:
+      213: -4471987304830872076
+    second: main_leftside_lift_down-Sheet_25
+  - first:
+      213: 6449990725700870752
+    second: main_leftside_lift_down-Sheet_26
+  - first:
+      213: -1666013673880015978
+    second: main_leftside_lift_down-Sheet_27
+  - first:
+      213: 7776422024555835562
+    second: main_leftside_lift_down-Sheet_28
+  - first:
+      213: -6903787312701105104
+    second: main_leftside_lift_down-Sheet_29
+  - first:
+      213: -8820989802699112011
+    second: main_leftside_lift_down-Sheet_30
+  - first:
+      213: -317669778669626744
+    second: main_leftside_lift_down-Sheet_31
+  - first:
+      213: 7798237541517597880
+    second: main_leftside_lift_down-Sheet_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1632
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30c4d2ad25ecce670800000000000000
+      internalID: 8569451046222253059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01911a54ea9cd2b00800000000000000
+      internalID: 805521658698864912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a5d88712381bb270800000000000000
+      internalID: 8267228144390952358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51a85cfede87fd6a0800000000000000
+      internalID: -6422281580281755115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e5c2b5707caae00800000000000000
+      internalID: 1056875896980135462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccd96633684a5ea40800000000000000
+      internalID: 5396900624768343500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8431a6817be13be20800000000000000
+      internalID: 3365067118313345864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f036712b6057d90800000000000000
+      internalID: -7100761875513405675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46bcce3a0c95a6f10800000000000000
+      internalID: 2263720446625893220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ea7f91808365ef0800000000000000
+      internalID: -119846732632183226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b3be7b40b559950800000000000000
+      internalID: 6455165716729117471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0281889deaf79c30800000000000000
+      internalID: 4366234262131802638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62d95af85e50d3ef0800000000000000
+      internalID: -126938730980860634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c6f403318d74060800000000000000
+      internalID: 6937751327914028065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb748629d2c6c0570800000000000000
+      internalID: 8434235145143732156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a21effc0b6825d7b0800000000000000
+      internalID: -5200205754484661974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 590ef0d564b3b05b0800000000000000
+      internalID: -5401158154705706859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d7db9e8f16a0c200800000000000000
+      internalID: 198341038071076818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ce04de4ccf38fd20800000000000000
+      internalID: 3312467672659398337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2211b486469c5adc0800000000000000
+      internalID: -3628272491693403870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c5ae856f4bffbb80800000000000000
+      internalID: -8376700463460997694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a68e537afd4140760800000000000000
+      internalID: 7423081036629010538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf414c1752badf70800000000000000
+      internalID: 9212872074945712042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23a37cdef2a921f90800000000000000
+      internalID: -6984350541454820814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e8b97ae26bbdf5a0800000000000000
+      internalID: -6485821854828611354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f5df776d3f40f1c0800000000000000
+      internalID: -4471987304830872076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 062e6f93468f28950800000000000000
+      internalID: 6449990725700870752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69b2079f36121e8e0800000000000000
+      internalID: -1666013673880015978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa0bc2d41a66beb60800000000000000
+      internalID: 7776422024555835562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03c1a955402d030a0800000000000000
+      internalID: -6903787312701105104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b1c6c2928c859580800000000000000
+      internalID: -8820989802699112011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88a1586f409679bf0800000000000000
+      internalID: -317669778669626744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main_leftside_lift_down-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 0
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bc95482ab7e83c60800000000000000
+      internalID: 7798237541517597880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

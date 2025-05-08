@@ -1,0 +1,467 @@
+fileFormatVersion: 2
+guid: 0f9013e5645d9b743ab9243b2307780d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5875265325398905293
+    second: alt_blue_green_barrel_idle-Sheet_0
+  - first:
+      213: -715941968678750517
+    second: alt_blue_green_barrel_idle-Sheet_1
+  - first:
+      213: -8618681200790060989
+    second: alt_blue_green_barrel_idle-Sheet_2
+  - first:
+      213: 4265159408198593195
+    second: alt_blue_green_barrel_idle-Sheet_3
+  - first:
+      213: 822093528387702965
+    second: alt_blue_green_barrel_idle-Sheet_4
+  - first:
+      213: 2394167368398367430
+    second: alt_blue_green_barrel_idle-Sheet_5
+  - first:
+      213: -1483642969288653595
+    second: alt_blue_green_barrel_idle-Sheet_6
+  - first:
+      213: -2016182095453190376
+    second: alt_blue_green_barrel_idle-Sheet_7
+  - first:
+      213: -412876558151068603
+    second: alt_blue_green_barrel_idle-Sheet_8
+  - first:
+      213: -437546637054477551
+    second: alt_blue_green_barrel_idle-Sheet_9
+  - first:
+      213: 3128103186340304553
+    second: alt_blue_green_barrel_idle-Sheet_10
+  - first:
+      213: 7803685597022628520
+    second: alt_blue_green_barrel_idle-Sheet_11
+  - first:
+      213: -6087453999199745080
+    second: alt_blue_green_barrel_idle-Sheet_12
+  - first:
+      213: 6311005493548839247
+    second: alt_blue_green_barrel_idle-Sheet_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: alt_blue_green_barrel_idle-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc152995fa2298150800000000000000
+      internalID: 5875265325398905293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alt_blue_green_barrel_idle-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6fb1d92967016f0800000000000000
+      internalID: -715941968678750517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alt_blue_green_barrel_idle-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34042929c1b446880800000000000000
+      internalID: -8618681200790060989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alt_blue_green_barrel_idle-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baaa71c42e3e03b30800000000000000
+      internalID: 4265159408198593195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alt_blue_green_barrel_idle-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b052bb55b9a86b00800000000000000
+      internalID: 822093528387702965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alt_blue_green_barrel_idle-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ca6736698ac93120800000000000000
+      internalID: 2394167368398367430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alt_blue_green_barrel_idle-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e44b02849a096be0800000000000000
+      internalID: -1483642969288653595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alt_blue_green_barrel_idle-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 0
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817820ef0151504e0800000000000000
+      internalID: -2016182095453190376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alt_blue_green_barrel_idle-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544d15735fa254af0800000000000000
+      internalID: -412876558151068603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alt_blue_green_barrel_idle-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 0
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b73bdd6a58de9f0800000000000000
+      internalID: -437546637054477551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alt_blue_green_barrel_idle-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 0
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a6d49a4641496b20800000000000000
+      internalID: 3128103186340304553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alt_blue_green_barrel_idle-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aaad5d64b24c4c60800000000000000
+      internalID: 7803685597022628520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alt_blue_green_barrel_idle-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 0
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cb0b2727d4058ba0800000000000000
+      internalID: -6087453999199745080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alt_blue_green_barrel_idle-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 0
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41748a2f02359750800000000000000
+      internalID: 6311005493548839247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
