@@ -153,13 +153,13 @@ public class Enemy : MonoBehaviour
         if (rb.linearVelocity.x > Mathf.Epsilon)
         {
             Vector3 scale = transform.localScale;
-            scale.x = 1;
+            scale.x = -1;
             transform.localScale = scale;
         }
         else if (rb.linearVelocity.x < -Mathf.Epsilon)
         {
             Vector3 scale = transform.localScale;
-            scale.x = -1;
+            scale.x = 1;
             transform.localScale = scale;
         }
     }
