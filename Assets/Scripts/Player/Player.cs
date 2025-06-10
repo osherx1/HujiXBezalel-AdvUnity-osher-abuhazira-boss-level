@@ -418,379 +418,514 @@ public class Player : MonoBehaviour
     private bool hasAirDashed = false;
     private void FixedUpdate()
     {
-        if (isDead)
-        {
+    if (isDead)
+        return;
+
+    CheckIsOnGround();
+    HandleBeingAttacked();
+    HandleDashLogic();
+    HandleAttackLogic();
+    HandleJumpLogic();
+    HandleBounceLogic();
+    HandleGeneralLogic();
+    HandleRunningIdleFallingLogic();
+    HandleTimersAndInputReset();
+    }
+    
+    private void HandleBeingAttacked()
+    {
+        if (!isBeingAttacked)
             return;
-        }
-        CheckIsOnGround();
 
-        //Being Attacked
-        if (isBeingAttacked)
+        // Determine phase of knockback
+        if (beingAttackedTimer < attackKnockBackDuration)
         {
-            if (beingAttackedTimer < attackKnockBackDuration)
-            {
-                rb.linearVelocity = knockBackDirection * attackKnockBackSpeed;
-            }
-            else if (beingAttackedTimer < attackKnockBackDuration + getHitDuration)
-            {
-                rb.linearVelocity = Vector2.zero;
-                rb.gravityScale = savedGravity;
-            }
-            else
-            {
-                rb.gravityScale = savedGravity;
-                isBeingAttacked = false;
-            }
-            anim.Play("Idle");
-            beingAttackedTimer += Time.fixedDeltaTime;
+            ApplyKnockback();
         }
+        else if (beingAttackedTimer < attackKnockBackDuration + getHitDuration)
+        {
+            StopAndRestoreGravity();
+        }
+        else
+        {
+            EndBeingAttacked();
+        }
+        anim.Play("Idle");
+        beingAttackedTimer += Time.fixedDeltaTime;
+    }
 
-        //Dash
+    private void ApplyKnockback()
+    {
+        rb.linearVelocity = knockBackDirection * attackKnockBackSpeed;
+    }
+
+    private void StopAndRestoreGravity()
+    {
+        rb.linearVelocity = Vector2.zero;
+        rb.gravityScale = savedGravity;
+    }
+
+    private void EndBeingAttacked()
+    {
+        rb.gravityScale = savedGravity;
+        isBeingAttacked = false;
+    }
+
+    
+    private void HandleDashLogic()
+    {
         if (isOnGround && hasAirDashed)
-        {
             hasAirDashed = false;
-        }
-        if ((wantToDash || dashBufferedTimer > Mathf.Epsilon) && (isOnGround || !hasAirDashed) && !isBeingAttacked && !isDashing && !isAttacking && dashCoolDownTimer <= Mathf.Epsilon)
+
+        bool canDash = (isOnGround || !hasAirDashed) && !isBeingAttacked && !isDashing && !isAttacking && dashCoolDownTimer <= Mathf.Epsilon;
+
+        if ((wantToDash || dashBufferedTimer > Mathf.Epsilon) && canDash)
         {
-            if (!isOnGround)
-            {
-                hasAirDashed = true;
-            }
-            sound.Dash();
-            dashEffect.Play(); dashEffect2.Play();
-            isDashing = true;
-            dashTimer = 0;
-            savedGravity = rb.gravityScale;
-            rb.gravityScale = 0f;
-            dashDir = lookDir;
-            dashBufferedTimer = 0;
-            anim.Play("Dash");
-            if (isRunning)
-            {
-                isRunning = false;
-            }
-            if (isJumping)
-            {
-                isJumping = false;
-                endJumpOnMin = false;
-            }
-            if (isBouncing)
-            {
-                isBouncing = false;
-            }
+            StartDash();
         }
         else if (wantToDash)
         {
             dashBufferedTimer = dashBufferInputLength;
         }
+
         if (isDashing)
         {
-            dashTimer += Time.fixedDeltaTime;
-            if (dashTimer >= dashLength)
+            ContinueDash();
+        }
+        else
+        {
+            CooldownDash();
+        }
+    }
+
+    private void StartDash()
+    {
+        if (!isOnGround)
+            hasAirDashed = true;
+
+        sound.Dash();
+        PlayDashEffects(true);
+        isDashing = true;
+        dashTimer = 0;
+        savedGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        dashDir = lookDir;
+        dashBufferedTimer = 0;
+        anim.Play("Dash");
+
+        StopActionIf(ref isRunning);
+        StopActionIf(ref isJumping, ref endJumpOnMin);
+        StopActionIf(ref isBouncing);
+    }
+
+    private void ContinueDash()
+    {
+        dashTimer += Time.fixedDeltaTime;
+        if (dashTimer >= dashLength)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.gravityScale = savedGravity;
+            isDashing = false;
+            PlayDashEffects(false);
+        }
+        else
+        {
+            dashCoolDownTimer = dashCoolDown;
+            rb.linearVelocity = new Vector2(dashSpeed * dashDir, 0);
+        }
+    }
+
+    private void CooldownDash()
+    {
+        if (dashCoolDownTimer > 0f)
+            dashCoolDownTimer -= Time.fixedDeltaTime;
+    }
+
+    private void PlayDashEffects(bool play)
+    {
+        if (play)
+        {
+            dashEffect?.Play();
+            dashEffect2?.Play();
+        }
+        else
+        {
+            dashEffect?.Stop();
+            dashEffect2?.Stop();
+        }
+    }
+
+    private void StopActionIf(ref bool actionFlag, ref bool optionalFlag)
+    {
+        if (actionFlag)
+        {
+            actionFlag = false;
+            optionalFlag = false;
+        }
+    }
+    private void StopActionIf(ref bool actionFlag)
+    {
+        if (actionFlag) actionFlag = false;
+    }
+
+
+private void HandleAttackLogic()
+{
+    bool canAttack = !isBeingAttacked && !isAttacking && !isDashing && attackCoolDownTimer <= Mathf.Epsilon;
+
+    if ((wantToAttack || attackBufferedTimer > Mathf.Epsilon) && canAttack)
+    {
+        StartAttack();
+    }
+    else if (wantToAttack)
+    {
+        attackBufferedTimer = attackBufferInputLength;
+    }
+
+    if (isAttacking)
+    {
+        ContinueAttack();
+    }
+    else
+    {
+        if (attackCoolDownTimer > 0f)
+            attackCoolDownTimer -= Time.fixedDeltaTime;
+    }
+}
+
+private void StartAttack()
+{
+    currentAttackPrefab = ChooseAttackPrefab();
+    anim.Play(GetAttackAnimName());
+    sound.Attack();
+    isAttacking = true;
+    attackTimer = 0f;
+    attackBufferedTimer = 0;
+    preAttackDone = false;
+    attackDone = false;
+}
+
+private void ContinueAttack()
+{
+    attackTimer += Time.fixedDeltaTime;
+
+    if (attackTimer < preAttackLength)
+        return; // Waiting pre-attack
+
+    if (attackTimer < preAttackLength + attackLength)
+    {
+        if (!preAttackDone)
+        {
+            preAttackDone = true;
+            SetAttackPrefabActive(true);
+        }
+    }
+    else if (attackTimer < preAttackLength + attackLength + postAttackLength)
+    {
+        if (!attackDone)
+        {
+            attackDone = true;
+            SetAttackPrefabActive(false);
+        }
+    }
+    else
+    {
+        EndAttack();
+    }
+}
+
+private void EndAttack()
+{
+    SetAttackPrefabActive(false);
+    isAttacking = false;
+    attackCoolDownTimer = attackCoolDown;
+
+    if (isJumping)
+        anim.Play("Jump");
+    if (isRunning)
+        anim.Play("Walk");
+}
+
+private GameObject ChooseAttackPrefab()
+{
+    if (lookYDir == 1 && lookPower >= movePower)
+        return attackUpPrefab;
+    if (lookYDir == -1 && lookPower >= movePower && !isOnGround)
+        return attackDownPrefab;
+    return attackPrefab;
+}
+
+private string GetAttackAnimName()
+{
+    if (lookYDir == 1 && lookPower >= movePower)
+        return "AttackUp";
+    if (lookYDir == -1 && lookPower >= movePower && !isOnGround)
+        return "AttackDown";
+    return "Attack";
+}
+
+private void SetAttackPrefabActive(bool active)
+{
+    if (currentAttackPrefab != null)
+        currentAttackPrefab.SetActive(active);
+}
+
+
+private void HandleJumpLogic()
+{
+    if (isOnGround && jumpWasUsed)
+        jumpWasUsed = false;
+
+    bool canJump = (isOnGround || jumpForgiveTimer > Mathf.Epsilon)
+                   && (wantToJump || jumpBufferedTimer > Mathf.Epsilon)
+                   && !isBeingAttacked && !isJumping && !isDashing && !jumpWasUsed;
+
+    if (canJump)
+    {
+        if (endNextJumpOnMin)
+        {
+            endNextJumpOnMin = false;
+            endJumpOnMin = true;
+        }
+        sound.Jump();
+        jumpForgiveTimer = 0f;
+        anim.Play("Jump");
+        isJumping = true;
+        jumpWasUsed = true;
+        jumpTimer = 0f;
+        jumpBufferedTimer = 0f;
+        if (isRunning) isRunning = false;
+    }
+    else if (wantToJump)
+    {
+        jumpBufferedTimer = jumpBufferInputLength;
+    }
+
+    if (wantToStopJump && isJumping)
+    {
+        if (jumpTimer < minJumpLength)
+        {
+            endJumpOnMin = true;
+        }
+        else
+        {
+            StopJump();
+        }
+    }
+
+    if (isJumping)
+    {
+        jumpTimer += Time.fixedDeltaTime;
+        if (jumpTimer >= maxJumpLength || (jumpTimer >= minJumpLength && endJumpOnMin) || HasHitHead())
+        {
+            endJumpOnMin = false;
+            StopJump();
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpSpeed);
+        }
+    }
+}
+
+private void StopJump()
+{
+    rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+    isJumping = false;
+}
+
+
+private void HandleBounceLogic()
+{
+    if (!isBouncing)
+        return;
+
+    rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounceSpeed);
+    bounceTimer -= Time.fixedDeltaTime;
+
+    if (bounceTimer <= 0f)
+    {
+        isBouncing = false;
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+    }
+}
+
+
+private void HandleGeneralLogic()
+{
+    HandleInvincibility();
+    HandleRally();
+
+    // Clamp falling speed
+    if (!isDashing && !isBeingAttacked && rb.linearVelocity.y < -maxFallSpeed)
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, -maxFallSpeed);
+
+    // Horizontal movement
+    if (!isDashing && !isBeingAttacked)
+        rb.linearVelocity = new Vector2(moveDir * moveSpeed, rb.linearVelocity.y);
+}
+
+private void HandleInvincibility()
+{
+    if (invincibleTimer > 0)
+    {
+        invincibleTimer -= Time.fixedDeltaTime;
+        if (invincibleTimer < Mathf.Epsilon)
+        {
+            spriteRenderer.material = normalMaterial;
+            health.SetCanHit(true);
+        }
+    }
+}
+
+private void HandleRally()
+{
+    if (rallyTimer > 0)
+    {
+        rallyTimer -= Time.fixedDeltaTime;
+        if (rallyTimer < Mathf.Epsilon)
+        {
+            rallyTimer = 0f;
+            currentCanRally = 0;
+            playerUI.UpdateHealth(health.currentHealth, 0);
+        }
+    }
+}
+
+
+private void HandleRunningIdleFallingLogic()
+{
+    if (!isRunning && moveDir != 0 && !isAttacking && !isJumping && isOnGround && !isDashing && !isBeingAttacked)
+        StartRunning();
+    else if (moveDir == 0)
+        isRunning = false;
+
+    HandleLanding();
+    HandleIdleAndFalling();
+    HandleStepSoundAndSpriteFlip();
+}
+
+private void StartRunning()
+{
+    isRunning = true;
+    anim.Play("Walk");
+    stepTimer = stepInterval;
+    sound.Step();
+}
+
+private void HandleLanding()
+{
+    if (isFalling && isOnGround)
+    {
+        if (rb.linearVelocity.y < -19f)
+            ShakeCameraOnLand();
+        sound.Land();
+    }
+}
+
+private void ShakeCameraOnLand()
+{
+    var camShake = FindObjectOfType<CameraShake>();
+    camShake.shakePower = 0.1f;
+    camShake.timeScale = 1.2f;
+    camShake.Shake();
+}
+
+private void HandleIdleAndFalling()
+{
+    if (!isRunning && !isDashing && !isAttacking && !isJumping && !isBeingAttacked)
+    {
+        if (isOnGround)
+        {
+            if (!isIdle)
             {
-                rb.linearVelocity = Vector2.zero;
-                rb.gravityScale = savedGravity;
-                isDashing = false;
-                dashEffect.Stop(); dashEffect2.Stop();
-            }
-            else
-            {
-                dashCoolDownTimer = dashCoolDown;
-                rb.linearVelocity = new Vector2(dashSpeed * dashDir, 0);
+                isIdle = true;
+                anim.Play("Idle");
             }
         }
         else
         {
-            if (dashCoolDownTimer > 0f)
+            if (!isFalling)
             {
-                dashCoolDownTimer -= Time.fixedDeltaTime;
+                isFalling = true;
+                anim.Play("Falling");
             }
         }
-        //Attack
-        if ((wantToAttack || attackBufferedTimer > Mathf.Epsilon) && !isBeingAttacked && !isAttacking && !isDashing && attackCoolDownTimer <= Mathf.Epsilon)
-        {
-            if (lookYDir == 1 && lookPower >= movePower)
-            {
-                anim.Play("AttackUp");
-                currentAttackPrefab = attackUpPrefab;
-            }
-            else if (lookYDir == -1 && lookPower >= movePower && !isOnGround)
-            {
-                anim.Play("AttackDown");
-                currentAttackPrefab = attackDownPrefab;
-            }
-            else
-            {
-                currentAttackPrefab = attackPrefab;
-                anim.Play("Attack");
-            }
-            sound.Attack();
-            isAttacking = true;
-            attackTimer = 0f;
-            attackBufferedTimer = 0;
-            preAttackDone = false;
-            attackDone = false;
-        }
-        else if (wantToAttack)
-        {
-            attackBufferedTimer = attackBufferInputLength;
-        }
-        if (isAttacking)
-        {
-            if (attackTimer < preAttackLength + attackLength + postAttackLength)
-            {
-                attackTimer += Time.fixedDeltaTime;
-            }
+    }
+    else
+    {
+        isIdle = false;
+        isFalling = false;
+    }
+    if (isFalling)
+        isIdle = false;
 
-            if (attackTimer < preAttackLength)
-            {
+    if (isOnGround)
+    {
+        isFalling = false;
+        jumpForgiveTimer = jumpForgiveLength;
+    }
+}
 
-            }
-            else if (attackTimer >= preAttackLength && attackTimer < preAttackLength + attackLength)
+private void HandleStepSoundAndSpriteFlip()
+{
+    if (!isDashing && !isAttacking && !isBeingAttacked)
+    {
+        if (isRunning)
+        {
+            if (stepTimer > 0f)
             {
-                if (!preAttackDone)
-                {
-                    preAttackDone = true;
-                    currentAttackPrefab.SetActive(true);
-                }
-            }
-            else if (attackTimer >= preAttackLength + attackLength && attackTimer < preAttackLength + attackLength + postAttackLength)
-            {
-                if (!attackDone)
-                {
-                    attackDone = true;
-                    currentAttackPrefab.SetActive(false);
-                }
+                stepTimer -= Time.fixedDeltaTime;
             }
             else
             {
-                currentAttackPrefab.SetActive(false);
-                isAttacking = false;
-                attackCoolDownTimer = attackCoolDown;
-                if (isJumping)
-                {
-                    anim.Play("Jump");
-                }
-                if (isRunning)
-                {
-                    anim.Play("Walk");
-                }
-            }
-        }
-        else
-        {
-            if (attackCoolDownTimer > 0f)
-            {
-                attackCoolDownTimer -= Time.fixedDeltaTime;
-            }
-        }
-        //Jump
-        if (isOnGround && jumpWasUsed)
-        {
-            jumpWasUsed = false;
-        }
-        if ((isOnGround || jumpForgiveTimer > Mathf.Epsilon) && (wantToJump || jumpBufferedTimer > Mathf.Epsilon) && !isBeingAttacked && !isJumping && !isDashing && !jumpWasUsed)
-        {
-            if (endNextJumpOnMin)
-            {
-                endNextJumpOnMin = false;
-                endJumpOnMin = true;
-            }
-            sound.Jump();
-            jumpForgiveTimer = 0f;
-            anim.Play("Jump");
-            isJumping = true;
-            jumpWasUsed = true;
-            jumpTimer = 0f;
-            jumpBufferedTimer = 0f;
-            if (isRunning)
-            {
-                isRunning = false;
-            }
-        }
-        else if (wantToJump)
-        {
-            jumpBufferedTimer = jumpBufferInputLength;
-        }
-        if (wantToStopJump && isJumping)
-        {
-            if (jumpTimer < minJumpLength)
-            {
-                endJumpOnMin = true;
-            }
-            else
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
-                isJumping = false;
-            }
-        }
-        if (isJumping)
-        {
-            jumpTimer += Time.fixedDeltaTime;
-            if (jumpTimer >= maxJumpLength || (jumpTimer >= minJumpLength && endJumpOnMin) || HasHitHead())
-            {
-                endJumpOnMin = false;
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
-                isJumping = false;
-            }
-            else
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpSpeed);
-            }
-        }
-        if (isBouncing)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounceSpeed);
-            if (bounceTimer > 0f)
-            {
-                bounceTimer -= Time.fixedDeltaTime;
-            }
-            else
-            {
-                isBouncing = false;
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
-            }
-        }
-
-        //General
-        if (invincibleTimer > 0)
-        {
-            invincibleTimer -= Time.fixedDeltaTime;
-            if (invincibleTimer < Mathf.Epsilon)
-            {
-                spriteRenderer.material = normalMaterial;
-                health.SetCanHit(true);
-            }
-        }
-        if (rallyTimer > 0)
-        {
-            rallyTimer -= Time.fixedDeltaTime;
-            if (rallyTimer < Mathf.Epsilon)
-            {
-                rallyTimer = 0f;
-                currentCanRally = 0;
-                playerUI.UpdateHealth(health.currentHealth, 0);
-            }
-        }
-        if (!isDashing && !isBeingAttacked && rb.linearVelocity.y < -maxFallSpeed)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, -maxFallSpeed);
-        }
-        if (!isDashing && !isBeingAttacked)
-        {
-            rb.linearVelocity = new Vector2(moveDir * moveSpeed, rb.linearVelocity.y);
-        }
-        if (!isRunning && moveDir != 0)
-        {
-            if (!isAttacking && !isJumping && isOnGround && !isDashing && !isBeingAttacked)
-            {
-                isRunning = true;
-                anim.Play("Walk");
                 stepTimer = stepInterval;
                 sound.Step();
             }
         }
-        else if (moveDir == 0)
+        if (facingDir != lookDir)
         {
-            isRunning = false;
+            FlipSprite();
         }
-
-        if (isFalling && isOnGround)
-        {
-            if (rb.linearVelocity.y < -19f)
-            {
-                var camShake = FindObjectOfType<CameraShake>();
-                camShake.shakePower = 0.1f;
-                camShake.timeScale = 1.2f;
-                camShake.Shake();
-            }
-            sound.Land();
-        }
-        if (!isRunning && !isDashing && !isAttacking && !isJumping && !isBeingAttacked)
-        {
-            if (isOnGround)
-            {
-                if (!isIdle)
-                {
-                    isIdle = true;
-                    anim.Play("Idle");
-                }
-            }
-            else
-            {
-                if (!isFalling)
-                {
-                    isFalling = true;
-                    anim.Play("Falling");
-                }
-            }
-        }
-        else
-        {
-            isIdle = false;
-            isFalling = false;
-        }
-        if (isFalling)
-        {
-            isIdle = false;
-        }
-        if (isOnGround)
-        {
-            isFalling = false;
-            jumpForgiveTimer = jumpForgiveLength;
-        }
-        if (!isDashing && !isAttacking && !isBeingAttacked)
-        {
-            if (isRunning)
-            {
-                if (stepTimer > 0f)
-                {
-                    stepTimer -= Time.fixedDeltaTime;
-                }
-                else
-                {
-                    stepTimer = stepInterval;
-                    sound.Step();
-                }
-            }
-
-            if (facingDir != lookDir)
-            {
-                Vector3 scale = transform.localScale;
-                scale.x *= -1;
-                transform.localScale = scale;
-                facingDir = lookDir;
-            }
-        }
-        if (attackBufferedTimer > 0)
-        {
-            attackBufferedTimer -= Time.fixedDeltaTime;
-        }
-        if (dashBufferedTimer > 0)
-        {
-            dashBufferedTimer -= Time.fixedDeltaTime;
-        }
-        if (jumpBufferedTimer > 0)
-        {
-            if (wantToStopJump)
-            {
-                endNextJumpOnMin = true;
-            }
-            jumpBufferedTimer -= Time.fixedDeltaTime;
-            if (jumpBufferedTimer < Mathf.Epsilon)
-            {
-                endNextJumpOnMin = false;
-            }
-        }
-        if (jumpForgiveTimer > 0)
-        {
-            jumpForgiveTimer -= Time.fixedDeltaTime;
-        }
-        wantToJump = false;
-        wantToStopJump = false;
-        wantToDash = false;
-        wantToAttack = false;
     }
+}
+
+private void FlipSprite()
+{
+    Vector3 scale = transform.localScale;
+    scale.x *= -1;
+    transform.localScale = scale;
+    facingDir = lookDir;
+}
+
+
+private void HandleTimersAndInputReset()
+{
+    if (attackBufferedTimer > 0)
+        attackBufferedTimer -= Time.fixedDeltaTime;
+
+    if (dashBufferedTimer > 0)
+        dashBufferedTimer -= Time.fixedDeltaTime;
+
+    if (jumpBufferedTimer > 0)
+    {
+        if (wantToStopJump)
+            endNextJumpOnMin = true;
+
+        jumpBufferedTimer -= Time.fixedDeltaTime;
+        if (jumpBufferedTimer < Mathf.Epsilon)
+            endNextJumpOnMin = false;
+    }
+    if (jumpForgiveTimer > 0)
+        jumpForgiveTimer -= Time.fixedDeltaTime;
+
+    // Reset input flags
+    wantToJump = false;
+    wantToStopJump = false;
+    wantToDash = false;
+    wantToAttack = false;
+}
+
 
     private bool HasHitHead()
     {
