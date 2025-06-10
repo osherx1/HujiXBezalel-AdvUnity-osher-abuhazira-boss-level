@@ -88,12 +88,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -488,7 +488,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -497,7 +497,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DashEffect2_0: -690951008340352036
+      DashEffect2_1: 2118389437733189384
+      DashEffect2_10: 2448919602142946925
+      DashEffect2_11: -6492392476084908305
+      DashEffect2_12: -3794013233368793294
+      DashEffect2_13: -7565876013468144578
+      DashEffect2_14: 7766898904888849629
+      DashEffect2_2: 3764023418835655837
+      DashEffect2_3: 6473004154503402647
+      DashEffect2_4: 3885817382143878477
+      DashEffect2_5: 6197764330119803361
+      DashEffect2_6: -6617649376668778103
+      DashEffect2_7: 7281252701661408755
+      DashEffect2_8: -2329032642691551853
+      DashEffect2_9: 8218119912233164480
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 60391050026060082}
   - component: {fileID: 5461130240774333889}
   m_Layer: 0
-  m_Name: Attack
+  m_Name: AttackBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,11 +63,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.00945282, y: 0.8319435}
+  m_Offset: {x: 0, y: 0.8319435}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 7946280011395617045}
   - component: {fileID: 1134541673054063153}
   - component: {fileID: 1018505243830026875}
+  - component: {fileID: 1427707078680365857}
   m_Layer: 0
   m_Name: Spikes Prefab
   m_TagString: Untagged
@@ -217,7 +218,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -1.1911912}
+  m_Offset: {x: 0, y: 0.45330226}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -227,8 +228,21 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.77, y: 3.6076174}
+  m_Size: {x: 5.77, y: 0.9589579}
   m_EdgeRadius: 0
+--- !u!114 &1427707078680365857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5615687348570552194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17fee1a54925dd749a400a91a8d42bda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnPosition: {fileID: 0}
 --- !u!1 &7807227486651416232
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,11 +306,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.1985321, y: 1.3708153}
+  m_Offset: {x: 0.0029907227, y: 1.6285744}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -306,7 +320,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 6.2374573, y: 3.7416306}
+  m_Size: {x: 4.850891, y: 4.2571487}
   m_EdgeRadius: 0
 --- !u!114 &7627188731989520189
 MonoBehaviour:
