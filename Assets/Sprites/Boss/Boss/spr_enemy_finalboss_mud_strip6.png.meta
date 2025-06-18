@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spr_enemy_finalboss_mud_strip6_0: 8363243876767608162
+      spr_enemy_finalboss_mud_strip6_1: -8917673576780708094
+      spr_enemy_finalboss_mud_strip6_2: 3834358038769330707
+      spr_enemy_finalboss_mud_strip6_3: 4513796730452973245
+      spr_enemy_finalboss_mud_strip6_4: 9132217595248221142
+      spr_enemy_finalboss_mud_strip6_5: 8670780465811366022
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
