@@ -47,6 +47,9 @@ public class Player : MonoBehaviour
     public ParticleSystem dashEffect;
     public ParticleSystem dashEffect2;
     public float deathParticleRate = 500f;
+    public bool isInvincible = false;
+    public GameObject damagePopupPrefab;
+    public Transform popupWorldPosition;
 
     private Rigidbody2D rb;
     private Collider2D boxCol;
@@ -133,8 +136,18 @@ public class Player : MonoBehaviour
                 currentCanRally = health.maxHealth - health.currentHealth;
             }
         }
+
+        
+        int damage = info.damageAmount;
+        if (damagePopupPrefab != null && popupWorldPosition != null)
+        {
+            var popup = Instantiate(damagePopupPrefab, info.point, Quaternion.identity);
+            popup.GetComponent<DamagePopup>().Setup(info.damageAmount);
+        }
+
         StartCoroutine(HitEffect(info));
     }
+
     IEnumerator HitEffect(HitInfo info)
     {
         hitEffectGO.transform.position = info.point;
@@ -196,6 +209,10 @@ public class Player : MonoBehaviour
     private float rallyTimer = 0f;
     private void Health_OnDamaged(HitInfo info)
     {
+        
+        if (isInvincible)
+            return;
+        
         sound.GetHit();
         if (health.currentHealth == 0)
         {

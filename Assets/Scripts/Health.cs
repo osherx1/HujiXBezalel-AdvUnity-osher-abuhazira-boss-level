@@ -43,7 +43,7 @@ public class Health : MonoBehaviour
     private void Health_OnHit(HitInfo info)
     {
         if (!canHit) return;
-        currentHealth -= 1;
+        currentHealth -= info.damageAmount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         if (currentHealth == 0)
         {

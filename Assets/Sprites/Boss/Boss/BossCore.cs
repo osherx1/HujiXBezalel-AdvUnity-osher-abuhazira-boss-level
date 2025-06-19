@@ -67,6 +67,11 @@ public class BossCore : MonoBehaviour
     [Header("Death")]
     public ParticleSystem deathEffect;
     public float deathEffectDuration = 5f;
+    
+    [Header("Health Bar")]
+    public GameObject healthBarPrefab;
+    private HealthBarWorld healthBarWorld;
+    public Transform healthBarAnchor;
 
     private Rigidbody2D rb;
     private Health health;
@@ -94,6 +99,14 @@ public class BossCore : MonoBehaviour
         {
             target = GameObject.FindGameObjectWithTag("Player").transform;
         }
+        if (healthBarPrefab != null)
+        {
+            var go = Instantiate(healthBarPrefab, healthBarAnchor.position, Quaternion.identity);
+            go.transform.SetParent(healthBarAnchor, worldPositionStays: true);
+            healthBarWorld = go.GetComponentInChildren<HealthBarWorld>();
+            healthBarWorld.Setup(health.maxHealth);
+            healthBarWorld.SetHealth(health.currentHealth, health.maxHealth);
+        }
     }
     private void OnEnable()
     {
@@ -106,6 +119,10 @@ public class BossCore : MonoBehaviour
     private void Health_OnDamaged(HitInfo info)
     {
         sound.GetHit();
+        
+        if (healthBarWorld != null)
+            healthBarWorld.SetHealth(health.currentHealth, health.maxHealth);
+        
         if (health.currentHealth == 0)
         {
             Die();

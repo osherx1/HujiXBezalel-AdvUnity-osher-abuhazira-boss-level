@@ -10,6 +10,7 @@ public struct HitInfo
     public Vector2 direction;
     public Vector3 point;
     public int damageType;
+    public int damageAmount;
 }
 
 public delegate void Hit(HitInfo info);
@@ -17,6 +18,7 @@ public class AttackBox : MonoBehaviour
 {
     public bool hitOnce = true;
     public int damageType = 0;
+    public int damage = 1;
 
     public event Hit OnHit;
 
@@ -45,6 +47,7 @@ public class AttackBox : MonoBehaviour
             hitInfo.direction = attackDir.normalized;
             hitInfo.point = collision.ClosestPoint(attackTrigger.bounds.center);
             hitInfo.damageType = damageType;
+            hitInfo.damageAmount = damage;
             target.Attack(hitInfo);
             OnHit?.Invoke(hitInfo);
         }
