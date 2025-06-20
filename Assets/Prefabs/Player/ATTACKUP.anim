@@ -37,6 +37,8 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 0}
+    - time: 0.1
+      value: {fileID: 21300000, guid: 6f2e9f3d55f4ac74bb7a7328340c1679, type: 3}
     - time: 0.3
       value: {fileID: 21300000, guid: 69df5e948a4493e4fa224b8edb5e8b0e, type: 3}
     - time: 0.4
@@ -77,6 +79,7 @@ AnimationClip:
     - {fileID: 21300000, guid: f6f2d6718e57fb049a8a4209d136c26d, type: 3}
     - {fileID: 21300000, guid: f6f2d6718e57fb049a8a4209d136c26d, type: 3}
     - {fileID: 0}
+    - {fileID: 21300000, guid: 6f2e9f3d55f4ac74bb7a7328340c1679, type: 3}
     - {fileID: 21300000, guid: 69df5e948a4493e4fa224b8edb5e8b0e, type: 3}
     - {fileID: 0}
   m_AnimationClipSettings:

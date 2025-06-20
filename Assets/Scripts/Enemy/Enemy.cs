@@ -20,6 +20,10 @@ public class Enemy : MonoBehaviour
     public Material getHitMaterial;
     public float invincibleDuration = 0.3f;
     public ParticleSystem deathEffect;
+    public GameObject healthBarPrefab; // Assign in inspector
+    public Transform healthBarAnchor;  // Optional: assign a child transform above the head in inspector
+
+    private HealthBarWorld healthBar;
 
     private Rigidbody2D rb;
     private Health health;
@@ -31,6 +35,15 @@ public class Enemy : MonoBehaviour
         health = GetComponent<Health>();
         state = EnemyState.wandering;
         normalMaterial = spriteRenderer.material;
+        
+        if (healthBarPrefab != null)
+        {
+            Vector3 spawnPos = healthBarAnchor ? healthBarAnchor.position : (transform.position + Vector3.up * 2);
+            GameObject go = Instantiate(healthBarPrefab, spawnPos, Quaternion.identity, transform);
+            healthBar = go.GetComponent<HealthBarWorld>();
+            healthBar.Setup(health.maxHealth);
+            healthBar.SetHealth(health.currentHealth, health.maxHealth);
+        }
     }
     private void OnEnable()
     {
@@ -76,6 +89,8 @@ public class Enemy : MonoBehaviour
         invincibleTimer = invincibleDuration;
         StartCoroutine(StaggerSequence());
         StartCoroutine(RecoilSequence());
+        if (healthBar != null)
+            healthBar.SetHealth(health.currentHealth, health.maxHealth);
     }
 
     private bool stagerDone = false;

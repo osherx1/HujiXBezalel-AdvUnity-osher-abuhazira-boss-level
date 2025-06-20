@@ -57,6 +57,7 @@ public class Player : MonoBehaviour
     private Animator anim;
     private Health health;
     private Material normalMaterial;
+    private bool isFrozen = false;
 
     private void Awake()
     {
@@ -75,6 +76,7 @@ public class Player : MonoBehaviour
     }
     private void OnEnable()
     {
+        GameManager.OnBossBeat += FreezePlayer;
         input.Player.Jump.performed += Jump_performed;
         input.Player.Jump.canceled += Jump_canceled;
         input.Player.Dash.performed += Dash_performed;
@@ -167,6 +169,7 @@ public class Player : MonoBehaviour
 
     private void OnDisable()
     {
+        GameManager.OnBossBeat -= FreezePlayer;
         input.Player.Jump.performed -= Jump_performed;
         input.Player.Jump.canceled -= Jump_canceled;
         input.Player.Dash.performed -= Dash_performed;
@@ -364,6 +367,8 @@ public class Player : MonoBehaviour
     private float movePower = 0f;
     private void Update()
     {
+        if (isFrozen)
+            return;
         if (isDead || isPaused)
         {
             return;
@@ -975,6 +980,13 @@ private void HandleTimersAndInputReset()
         {
             isOnGround = false;
         }
+    }
+    
+    private void FreezePlayer()
+    {
+        isFrozen = true;
+        rb.linearVelocity = Vector2.zero;
+        input.Disable();
     }
     private void OnDrawGizmos()
     {
