@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 699311441962287187}
   - component: {fileID: 60391050026060082}
   - component: {fileID: 5461130240774333889}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: AttackBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,6 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitOnce: 0
   damageType: 1
+  damage: 1
 --- !u!1 &5615687348570552194
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +255,7 @@ GameObject:
   - component: {fileID: 188018595170167774}
   - component: {fileID: 3150038236282687465}
   - component: {fileID: 7627188731989520189}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
