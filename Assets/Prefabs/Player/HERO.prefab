@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 5471869219739779011}
   - component: {fileID: 4979682737522792407}
   - component: {fileID: 3042065654081699532}
-  - component: {fileID: 6152256894697366934}
+  - component: {fileID: 4269528135854360770}
   m_Layer: 12
   m_Name: HitBox
   m_TagString: Untagged
@@ -179,7 +179,7 @@ Transform:
   m_GameObject: {fileID: 1618770507748887262}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.01, y: -0.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -253,8 +253,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canHit: 1
---- !u!61 &6152256894697366934
-BoxCollider2D:
+--- !u!70 &4269528135854360770
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -287,18 +287,9 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.30942535, y: -0.32624245}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1.6188507, y: 2.822918}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.07, y: 2.2}
+  m_Direction: 0
 --- !u!1 &1712147849947200045
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,7 +708,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.23427582, y: -0.06890297}
+  m_Offset: {x: -0.23427582, y: -0.008935928}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -727,7 +718,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.4685516, y: 3.6183662}
+  m_Size: {x: 1.4685516, y: 4.058117}
   m_EdgeRadius: 0
 --- !u!114 &4039954363156464272
 MonoBehaviour:
@@ -5767,7 +5758,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.02468571, y: 0}
+  m_Offset: {x: 0.02706796, y: 0.039977074}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5777,7 +5768,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0493712, y: 1}
+  m_Size: {x: 1.2355403, y: 1.0799541}
   m_EdgeRadius: 0
 --- !u!114 &5593038498834314917
 MonoBehaviour:
@@ -11290,7 +11281,7 @@ MonoBehaviour:
   dashEffect: {fileID: 4678397986673331784}
   dashEffect2: {fileID: 4678397986673331784}
   deathParticleRate: 500
-  isInvincible: 0
+  isInvincible: 1
   damagePopupPrefab: {fileID: 8272123711113411490, guid: bdaacccfa0755744aa5b39b224bc3efa, type: 3}
   popupWorldPosition: {fileID: 0}
   wantToAttack: 0
