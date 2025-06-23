@@ -485,11 +485,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.4
-    functionName: OnBossAnimationEnd
-    data: 
-    objectReferenceParameter: {fileID: 11500000, guid: f866215d25552fd4c930b521d16a705d, type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

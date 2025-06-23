@@ -9,6 +9,7 @@ public class Menu : MonoBehaviour
     public UnityEngine.EventSystems.EventSystem eventSystem;
 
     private bool isLoading = false;
+
     public void Play()
     {
         if (isLoading)
@@ -17,6 +18,7 @@ public class Menu : MonoBehaviour
         }
         isLoading = true;
         eventSystem.SetSelectedGameObject(null);
+        PlayerData.Reset();
         StartCoroutine(LoadGame());
     }
     IEnumerator LoadGame()

@@ -1058,8 +1058,8 @@ Transform:
   m_GameObject: {fileID: 79376078}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -5.9, z: 0}
-  m_LocalScale: {x: 31.75, y: 3, z: 1}
+  m_LocalPosition: {x: 0.04, y: -6.4132, z: 0}
+  m_LocalScale: {x: 31.75, y: 1.9736999, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3064,7 +3064,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.13320348}
+  m_Offset: {x: 0.23, y: 0.13320348}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5081,7 +5081,6 @@ Transform:
   - {fileID: 58150943}
   - {fileID: 901285384}
   - {fileID: 140606752}
-  - {fileID: 710494406}
   - {fileID: 304376597}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6583,37 +6582,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 14.621696, y: 4.527401}
   m_EdgeRadius: 0
---- !u!1 &710494405
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 710494406}
-  m_Layer: 0
-  m_Name: DEbug BOSS Point
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &710494406
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 710494405}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 90.64794, y: 30.637083, z: -4.8927293}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 516465003}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &718710050
 GameObject:
   m_ObjectHideFlags: 0
@@ -17965,7 +17933,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.74, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -18666,23 +18634,27 @@ PrefabInstance:
       objectReference: {fileID: 682367871}
     - target: {fileID: 1511351468069265, guid: 643f8a5e656884d4d8b2423cdb4ce501, type: 3}
       propertyPath: isInvincible
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1511351468069265, guid: 643f8a5e656884d4d8b2423cdb4ce501, type: 3}
       propertyPath: popupWorldPosition
       value: 
       objectReference: {fileID: 1298182155}
+    - target: {fileID: 2449274371795233449, guid: 643f8a5e656884d4d8b2423cdb4ce501, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.72
+      objectReference: {fileID: 0}
     - target: {fileID: 2731252857949733694, guid: 643f8a5e656884d4d8b2423cdb4ce501, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3049518960621093285, guid: 643f8a5e656884d4d8b2423cdb4ce501, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -188.2
+      value: -19.5
       objectReference: {fileID: 0}
     - target: {fileID: 3049518960621093285, guid: 643f8a5e656884d4d8b2423cdb4ce501, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -34.4
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3049518960621093285, guid: 643f8a5e656884d4d8b2423cdb4ce501, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18719,7 +18691,7 @@ PrefabInstance:
     - target: {fileID: 7564440845422501566, guid: 643f8a5e656884d4d8b2423cdb4ce501, type: 3}
       propertyPath: jump
       value: 
-      objectReference: {fileID: 8300000, guid: f8842f32c60dfea4da39112007a0ec0e, type: 3}
+      objectReference: {fileID: 8300000, guid: 07b0341dcd0eb5c4685aebf539df7e96, type: 3}
     - target: {fileID: 7564440845422501566, guid: 643f8a5e656884d4d8b2423cdb4ce501, type: 3}
       propertyPath: hitSomething
       value: 

@@ -22,8 +22,13 @@ public class GameManager : MonoBehaviour
             player.transform.position = PlayerData.checkPoint;
             FindObjectOfType<FollowCamera>().SnapToTarget();
         }
+        else
+        {
+            player.transform.position = PlayerData.checkPoint;
+        }
         BlackScreen.instance.FadeFromBlack();
     }
+
 
     public void BeatBoss()
     {

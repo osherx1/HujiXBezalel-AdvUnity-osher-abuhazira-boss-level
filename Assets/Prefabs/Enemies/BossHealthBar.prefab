@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1930073816899038494}
   - component: {fileID: 3128954165837887622}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: BarSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 170910102033208272}
   - component: {fileID: 818364468179014402}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: BarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 109202674949513248}
   - component: {fileID: 4379254861511106999}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: BossHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
