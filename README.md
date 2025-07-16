@@ -74,7 +74,7 @@ A fast-paced 2D boss-fight prototype with jump-dash-attack flow, rally mechanic,
 | **Game State**   | `GameManager.cs`     | Victory, respawn, checkpoints, fade transitions|
 
 <p align="center">
-<img width="601" height="592" alt="UML_GameArchitecture" src="https://github.com/user-attachments/assets/1276d02e-e83b-4f96-9824-7bd6e73d9798" />
+<img width="706" height="960" alt="Full_Game_Architecture_UML" src="https://github.com/user-attachments/assets/d61a75f0-c293-426e-ba04-a67f2cc49807" />
 </p>
 
 ---
