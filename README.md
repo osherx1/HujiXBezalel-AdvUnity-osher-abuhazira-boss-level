@@ -108,7 +108,7 @@ A fast-paced 2D boss-fight prototype with jump-dash-attack flow, rally mechanic,
 
 🎓 Here's a full technical explanation of the FSMs, coroutines, architecture & design patterns used in the project:
 
-[![Watch Code Explanation](https://img.youtube.com/vi/YOUR_CODE_VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=YOUR_CODE_VIDEO_ID)
+[[Watch Code Explanation]](https://youtu.be/sTUOQ4XW-48)
 
 ## 📎 Download & Play
 
