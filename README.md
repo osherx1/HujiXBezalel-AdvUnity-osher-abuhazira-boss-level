@@ -25,7 +25,7 @@
 
 > A short video showing boss combat, dash / jump mechanics and rally healing:
 
-[![Watch Gameplay on YouTube](https://img.youtube.com/vi/YOUR_GAMEPLAY_VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=YOUR_GAMEPLAY_VIDEO_ID)
+[[Watch Gameplay on YouTube]](https://youtu.be/j95xNAh2Vno)
 
 A fast-paced 2D boss-fight prototype with jump-dash-attack flow, rally mechanic, enemy knockbacks and a responsive camera system. All attacks are buffered. Boss actions follow a weighted-random FSM sequence. Built entirely in Unity.
 
