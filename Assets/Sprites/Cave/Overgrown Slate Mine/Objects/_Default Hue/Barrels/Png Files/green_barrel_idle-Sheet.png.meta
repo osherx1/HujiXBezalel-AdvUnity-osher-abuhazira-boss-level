@@ -135,6 +135,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -459,7 +472,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      green_barrel_idle-Sheet_0: 5932667703067191877
+      green_barrel_idle-Sheet_1: -4704275494250885276
+      green_barrel_idle-Sheet_10: 4800293233707322044
+      green_barrel_idle-Sheet_11: -5536611790557027229
+      green_barrel_idle-Sheet_12: -8707421812175956701
+      green_barrel_idle-Sheet_13: -4989592068510972755
+      green_barrel_idle-Sheet_2: 2216678450172543767
+      green_barrel_idle-Sheet_3: 6691554246277611838
+      green_barrel_idle-Sheet_4: -2484995533548196846
+      green_barrel_idle-Sheet_5: -3696253412891318092
+      green_barrel_idle-Sheet_6: -708854792675096811
+      green_barrel_idle-Sheet_7: -1970162059339943538
+      green_barrel_idle-Sheet_8: -3602710888518793006
+      green_barrel_idle-Sheet_9: -7473169362291093116
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

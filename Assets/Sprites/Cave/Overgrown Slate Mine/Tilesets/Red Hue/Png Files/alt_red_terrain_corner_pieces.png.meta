@@ -111,6 +111,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -259,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      alt_red_terrain_corner_pieces_0: -6258008781749119422
+      alt_red_terrain_corner_pieces_1: 1863052196378212569
+      alt_red_terrain_corner_pieces_2: -7655171842119569453
+      alt_red_terrain_corner_pieces_3: -7112299439077488843
+      alt_red_terrain_corner_pieces_4: -6014764552337324317
+      alt_red_terrain_corner_pieces_5: 996784212627290547
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

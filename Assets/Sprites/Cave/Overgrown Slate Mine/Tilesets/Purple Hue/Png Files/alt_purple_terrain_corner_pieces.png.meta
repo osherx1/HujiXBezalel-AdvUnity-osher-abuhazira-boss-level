@@ -111,6 +111,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -259,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      alt_purple_terrain_corner_pieces_0: 1905906432957958756
+      alt_purple_terrain_corner_pieces_1: 1456122186227524822
+      alt_purple_terrain_corner_pieces_2: 816943105212812721
+      alt_purple_terrain_corner_pieces_3: 2314507939109001699
+      alt_purple_terrain_corner_pieces_4: -3476548761391246989
+      alt_purple_terrain_corner_pieces_5: 7539636808222864288
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -129,6 +129,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -409,7 +422,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      alt_blue_purple_chest-Sheet_0: 4058580666405389066
+      alt_blue_purple_chest-Sheet_1: -6442948134426459932
+      alt_blue_purple_chest-Sheet_10: -1031297641677157728
+      alt_blue_purple_chest-Sheet_11: 8658936717346748855
+      alt_blue_purple_chest-Sheet_2: -9163965201807283650
+      alt_blue_purple_chest-Sheet_3: 7873212329599909298
+      alt_blue_purple_chest-Sheet_4: 4107270185657280857
+      alt_blue_purple_chest-Sheet_5: -1753148282720915790
+      alt_blue_purple_chest-Sheet_6: 8330997565444566279
+      alt_blue_purple_chest-Sheet_7: 594999180193737347
+      alt_blue_purple_chest-Sheet_8: -5253874913635773959
+      alt_blue_purple_chest-Sheet_9: 8760441597958018988
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

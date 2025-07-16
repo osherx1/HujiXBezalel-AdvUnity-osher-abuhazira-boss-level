@@ -1,4 +1,5 @@
 using System.Collections;
+using General;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -225,4 +226,6 @@ public class Enemy : MonoBehaviour
             isInWanderArea = false;
         }
     }
+    
+
 }

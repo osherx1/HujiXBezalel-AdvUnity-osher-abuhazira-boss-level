@@ -135,6 +135,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -459,7 +472,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      alt_purple_purple_barrel_idle-Sheet_0: -5235261878637534796
+      alt_purple_purple_barrel_idle-Sheet_1: -2086873284526851623
+      alt_purple_purple_barrel_idle-Sheet_10: -3875758486809391340
+      alt_purple_purple_barrel_idle-Sheet_11: -4350608026747997639
+      alt_purple_purple_barrel_idle-Sheet_12: 8335229210645830015
+      alt_purple_purple_barrel_idle-Sheet_13: 9180836027715845124
+      alt_purple_purple_barrel_idle-Sheet_2: -2977852774862582270
+      alt_purple_purple_barrel_idle-Sheet_3: -7462488903655871876
+      alt_purple_purple_barrel_idle-Sheet_4: -1007155191296261516
+      alt_purple_purple_barrel_idle-Sheet_5: -3598846009440031391
+      alt_purple_purple_barrel_idle-Sheet_6: 3240227644796025867
+      alt_purple_purple_barrel_idle-Sheet_7: 8688681167716201876
+      alt_purple_purple_barrel_idle-Sheet_8: 5077202945787469292
+      alt_purple_purple_barrel_idle-Sheet_9: 5561823949800906537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

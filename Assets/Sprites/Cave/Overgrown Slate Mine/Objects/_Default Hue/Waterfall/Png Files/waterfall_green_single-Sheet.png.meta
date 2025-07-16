@@ -141,6 +141,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -509,7 +522,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      waterfall_green_single-Sheet_0: -4085075502669545492
+      waterfall_green_single-Sheet_1: -7352268245538985758
+      waterfall_green_single-Sheet_10: 4751197174273167999
+      waterfall_green_single-Sheet_11: 3592947505583207138
+      waterfall_green_single-Sheet_12: 5556206586035485295
+      waterfall_green_single-Sheet_13: 3801105935268169890
+      waterfall_green_single-Sheet_14: -505850880895760182
+      waterfall_green_single-Sheet_15: 610333750684811327
+      waterfall_green_single-Sheet_2: -6696289318010368210
+      waterfall_green_single-Sheet_3: 528588302030539893
+      waterfall_green_single-Sheet_4: -8839161549838636529
+      waterfall_green_single-Sheet_5: 6321181057227566614
+      waterfall_green_single-Sheet_6: 7717208756465705076
+      waterfall_green_single-Sheet_7: 7548577919873514593
+      waterfall_green_single-Sheet_8: -7592869278208148028
+      waterfall_green_single-Sheet_9: 4983754144809918280
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

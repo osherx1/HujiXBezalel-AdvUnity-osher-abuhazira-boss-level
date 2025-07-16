@@ -117,6 +117,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -309,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cloak_enemy_running-Sheet_0: 3281139834539186607
+      cloak_enemy_running-Sheet_1: 2934863278822384051
+      cloak_enemy_running-Sheet_2: -5764255171453815435
+      cloak_enemy_running-Sheet_3: -8098209180557183895
+      cloak_enemy_running-Sheet_4: 2485210839999198475
+      cloak_enemy_running-Sheet_5: -2992203127493442621
+      cloak_enemy_running-Sheet_6: 8630617541728479649
+      cloak_enemy_running-Sheet_7: 7633595039934137686
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

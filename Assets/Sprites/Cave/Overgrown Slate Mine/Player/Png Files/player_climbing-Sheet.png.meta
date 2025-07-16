@@ -111,6 +111,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -259,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      player_climbing-Sheet_0: 2909753661488314017
+      player_climbing-Sheet_1: -976248493856732747
+      player_climbing-Sheet_2: -6651482489552380009
+      player_climbing-Sheet_3: -446610624170900767
+      player_climbing-Sheet_4: -6603424003301317838
+      player_climbing-Sheet_5: 4842218294529605017
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -189,6 +189,7 @@ public class BossCore : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Debug.Log($"[Boss] Current State: {state}");
         switch (state)
         {
             case BossState.flying:
@@ -221,6 +222,7 @@ public class BossCore : MonoBehaviour
         }
         else
         {
+            if (GlideWeight + SlamWeight + FireWeight <= 0f) return; 
             float action = Random.Range(0f, GlideWeight + SlamWeight + FireWeight);
             if (action < GlideWeight)
             {
@@ -361,13 +363,21 @@ public class BossCore : MonoBehaviour
         Utility.RotateTowards(slamPosition, transform);
         anim.Play("Slam");
         sound.Whoosh();
-        while (Vector3.Distance(transform.position, slamPosition) > 0.3f)
+        float timeout = 0.5f;
+        while (Vector3.Distance(transform.position, slamPosition) > 0.3f && timeout > 0f)
         {
             Vector3 moveDirection = slamPosition - transform.position;
             Vector2 moveVelocity = moveDirection.normalized * slamSpeed;
             rb.linearVelocity = moveVelocity;
+            timeout -= Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
         }
+
+        if (timeout <= 0f)
+        {
+            Debug.LogWarning("[Boss] Timeout while moving to slamPosition");
+        }
+
         sound.Slam();
         anim.Play("Fly");
         transform.rotation = savedRotation;
@@ -397,24 +407,20 @@ public class BossCore : MonoBehaviour
         anim.Play("Slam");
         Vector3 shockwavePosition = slamShockwave.transform.localPosition;
         slamShockwave.transform.parent = null;
-        while (Vector3.Distance(transform.position, targetPosition) > 0.3f)
+        while (Vector3.Distance(transform.position, slamPosition) > 0.3f && timeout > 0f)
         {
-            Vector3 moveDirection = targetPosition - transform.position;
-            Vector2 moveVelocity = moveDirection.normalized * flyAwaySpeed;
+            Vector3 moveDirection = slamPosition - transform.position;
+            Vector2 moveVelocity = moveDirection.normalized * slamSpeed;
             rb.linearVelocity = moveVelocity;
-            if (waitTimer > 0 && waitTimer <= shockWaveDuration + Mathf.Epsilon)
-            {
-                waitTimer -= Time.fixedDeltaTime;
-            }
-            else
-            {
-                waitTimer = 999f;
-                slamShockwave.SetActive(false);
-                slamShockwave.transform.parent = transform;
-                slamShockwave.transform.localPosition = shockwavePosition;
-            }
+            timeout -= Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
         }
+
+        if (timeout <= 0f)
+        {
+            Debug.LogWarning("[Boss] Timeout while moving to slamPosition");
+        }
+
         anim.Play("Fly");
         if (waitTimer > 0 && waitTimer <= shockWaveDuration + Mathf.Epsilon)
         {
@@ -448,6 +454,8 @@ public class BossCore : MonoBehaviour
     private Coroutine fireBallRoutine = null;
     IEnumerator FireBallAttackSequence()
     {
+        float savedGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
         bool chooseRight = Random.Range(0f, 1f) < 0.5f;
         chooseRight = true;
         Vector3 startPosition;
@@ -509,6 +517,7 @@ public class BossCore : MonoBehaviour
         }
         GoToFlyingState();
         fireBallRoutine = null;
+        rb.gravityScale = savedGravity;
     }
 
 
@@ -559,4 +568,14 @@ public class BossCore : MonoBehaviour
             sound.Fall();
         }
     }
+    
+    public BossState CurrentState => state;
+    public int CurrentHealth => health.currentHealth;
+    public bool CanAttack => canAttack;
+    public float FlyTimer => flyTimer;
+
+    public bool IsGlideRoutineNull => glideRoutine == null;
+    public bool IsSlamRoutineNull => slamRoutine == null;
+    public bool IsFireRoutineNull => fireBallRoutine == null;
+
 }

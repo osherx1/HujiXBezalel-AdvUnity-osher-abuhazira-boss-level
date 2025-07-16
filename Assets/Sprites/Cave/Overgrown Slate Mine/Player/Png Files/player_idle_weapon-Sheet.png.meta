@@ -126,6 +126,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -384,7 +397,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      player_idle_weapon-Sheet_0: -7509222597024577510
+      player_idle_weapon-Sheet_1: -721570876487820556
+      player_idle_weapon-Sheet_10: -3794588117010136146
+      player_idle_weapon-Sheet_2: -8688915100477083356
+      player_idle_weapon-Sheet_3: -7493473235093761672
+      player_idle_weapon-Sheet_4: 3609799954866800312
+      player_idle_weapon-Sheet_5: 881964657639575671
+      player_idle_weapon-Sheet_6: -1313151921630329028
+      player_idle_weapon-Sheet_7: -7970245872681189067
+      player_idle_weapon-Sheet_8: 5574952269398574530
+      player_idle_weapon-Sheet_9: 6873122382036099339
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

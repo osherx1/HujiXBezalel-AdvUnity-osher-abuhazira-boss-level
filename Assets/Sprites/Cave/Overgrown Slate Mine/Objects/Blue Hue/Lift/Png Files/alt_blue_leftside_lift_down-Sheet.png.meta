@@ -192,6 +192,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -934,7 +947,40 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      alt_blue_leftside_lift_down-Sheet_0: -9028280249148070036
+      alt_blue_leftside_lift_down-Sheet_1: 2580028403567492018
+      alt_blue_leftside_lift_down-Sheet_10: 5158634527202641015
+      alt_blue_leftside_lift_down-Sheet_11: -8884740287780353967
+      alt_blue_leftside_lift_down-Sheet_12: 8237705869744435698
+      alt_blue_leftside_lift_down-Sheet_13: -739018825992760228
+      alt_blue_leftside_lift_down-Sheet_14: -3536870672892922289
+      alt_blue_leftside_lift_down-Sheet_15: -5308566005676285398
+      alt_blue_leftside_lift_down-Sheet_16: -3496757060770863300
+      alt_blue_leftside_lift_down-Sheet_17: 5953424074150955019
+      alt_blue_leftside_lift_down-Sheet_18: -1827333088394105058
+      alt_blue_leftside_lift_down-Sheet_19: 7544669773162698250
+      alt_blue_leftside_lift_down-Sheet_2: -4176578553931064308
+      alt_blue_leftside_lift_down-Sheet_20: 8410401546843604004
+      alt_blue_leftside_lift_down-Sheet_21: 2593183406789320497
+      alt_blue_leftside_lift_down-Sheet_22: 7531495645398054197
+      alt_blue_leftside_lift_down-Sheet_23: 4703288735996612231
+      alt_blue_leftside_lift_down-Sheet_24: 464114112717917082
+      alt_blue_leftside_lift_down-Sheet_25: -6645202829324951762
+      alt_blue_leftside_lift_down-Sheet_26: -7157282542129123521
+      alt_blue_leftside_lift_down-Sheet_27: -600109868968539308
+      alt_blue_leftside_lift_down-Sheet_28: 6276331466932643693
+      alt_blue_leftside_lift_down-Sheet_29: -8886143388347600180
+      alt_blue_leftside_lift_down-Sheet_3: 3431383962934154784
+      alt_blue_leftside_lift_down-Sheet_30: 8992637379917122282
+      alt_blue_leftside_lift_down-Sheet_31: 2167799991411309757
+      alt_blue_leftside_lift_down-Sheet_32: -1961771234424288679
+      alt_blue_leftside_lift_down-Sheet_4: -3373744013011408314
+      alt_blue_leftside_lift_down-Sheet_5: -5017016333910644494
+      alt_blue_leftside_lift_down-Sheet_6: 8070091703755284240
+      alt_blue_leftside_lift_down-Sheet_7: -977341971072802206
+      alt_blue_leftside_lift_down-Sheet_8: -8216845711918296270
+      alt_blue_leftside_lift_down-Sheet_9: -4195282799632196223
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
