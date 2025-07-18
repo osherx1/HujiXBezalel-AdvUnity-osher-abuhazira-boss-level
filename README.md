@@ -1,4 +1,4 @@
-# 🦇 2D Action Platformer - Slay The Demons – Hollow Knight -Style Boss Fight
+# 2D Action Platformer - Slay The Demons – Hollow Knight -Style Boss Fight
 
 [![Unity Version](https://img.shields.io/badge/Unity-6000.0.41f1-yellow?logo=unity&logoColor=white)](https://unity.com/)
 [![License: CC Assets](https://img.shields.io/badge/Assets-Free%20CC--BY--ITCH.IO-blue)](https://itch.io/)
