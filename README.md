@@ -16,8 +16,7 @@
 4. [🔧 Architecture Overview](#-architecture-overview)
 5. [📈 State Machines (UML)](#-state-machines-uml)
 6. [📦 Assets & Credits](#-assets--credits)
-7. [📘 Code Explanation (Technical Walkthrough)](#-code-explanation-technical-walkthrough)
-8. [📎 Download & Play](#-download--play)
+7. [📎 Download & Play](#-download--play)
 
 ---
 
@@ -102,13 +101,6 @@ A fast-paced 2D boss-fight prototype with jump-dash-attack flow, rally mechanic,
 
 ---
 
-# 📘 Code Explanation (Technical Walkthrough)
-
-> Want to understand how it works under the hood?
-
-🎓 Here's a full technical explanation of the FSMs, coroutines, architecture & design patterns used in the project:
-
-[[Watch Code Explanation]](https://youtu.be/sTUOQ4XW-48)
 
 ## 📎 Download & Play
 
